@@ -4,18 +4,21 @@ import './main-page.css';
 
 import { Sidebar } from '@components/sidebar';
 import { useState } from 'react';
-const { Header, Sider, Content } = Layout;
+import { Header } from '@components/header';
+const { Header: AntHeader, Sider: AntSider, Content: AntContent } = Layout;
 
 export const MainPage: React.FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
     return (
         <Layout>
-            <Sider theme='light' trigger={null} collapsible collapsed={collapsed}>
-                <Sidebar collapsed={collapsed} setCollapsed={setCollapsed}/>
-            </Sider>
+            <AntSider theme='light' trigger={null} collapsible collapsed={collapsed}>
+                <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
+            </AntSider>
             <Layout>
-                <Header>Header сайта</Header>
-                <Content>Контентная часть</Content>
+                <AntHeader style={{ padding: 0, height: 'auto' }}>
+                    <Header />
+                </AntHeader>
+                <AntContent>Контентная часть</AntContent>
             </Layout>
         </Layout>
     );
