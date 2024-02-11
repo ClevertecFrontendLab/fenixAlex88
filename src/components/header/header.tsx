@@ -15,7 +15,6 @@ export const Header: React.FC = () => {
                     Приветствуем тебя в CleverFit — приложении, которое поможет тебе добиться своей
                     мечты!
                 </Title>
-                <div className={classes.settingBtnBlock}>
                     <Button
                         className={classes.settingBtn}
                         type='text'
@@ -23,7 +22,6 @@ export const Header: React.FC = () => {
                     >
                         <span>Настройки</span>
                     </Button>
-                </div>
             </div>
         </AntHeader>
     );

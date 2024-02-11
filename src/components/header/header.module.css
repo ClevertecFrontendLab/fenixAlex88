@@ -1,13 +1,16 @@
 header.header {
-	background: #F0F5FF;
-	padding: 8px 24px;
-	height: auto;
+	background: var(--primary-light-1);
+	padding: 16px 24px;
+	height: 168px;
+	line-height: 1.3;
 }
 
 .breadcramp {
+	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: 14px;
-	color: #262626;
+	line-height: 130%;
+	color: var(--character-light-title-85);
 }
 
 .contentBlock {
@@ -16,6 +19,15 @@ header.header {
 }
 
 .title {
-	margin: 0;
+	margin: 15px 0 10px;
 	max-width: 900px;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 130%;
+	color: var(--character-light-title-85);
+}
+
+.settingBtn {
+	margin-top: 7px;
 }
