@@ -1,0 +1,33 @@
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.actionsList {
+	max-width: 752px;
+	padding: 24px;
+	margin-bottom: 24px;
+	background: #fff;
+}
+
+.actionsBody {
+    max-width: 752px;
+	margin-top: 19px;
+    padding: 24px;
+    background: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: #262626;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.downloadCardTitle {
+	display: flex;
+	flex-direction: column;
+}

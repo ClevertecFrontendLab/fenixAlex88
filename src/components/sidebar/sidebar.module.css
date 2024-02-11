@@ -1,5 +1,6 @@
 .sidebar {
-	min-height: 100vh;
+	height: 100vh;
+	max-height: 1024px;
 	position: relative;
 	z-index: 2;
 	display: flex;
