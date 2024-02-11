@@ -1,16 +1,17 @@
-import { Button, Card, List, Space, Typography } from 'antd';
-import { Layout } from 'antd';
-import classes from './mainContent.module.css';
-
+import { Layout, Button, Card, List, Space, Typography } from "antd";
 import {
-    AndroidFilled,
-    AppleFilled,
-    CalendarTwoTone,
-    HeartFilled,
-    IdcardOutlined,
-} from '@ant-design/icons';
+AndroidFilled,
+AppleFilled,
+CalendarTwoTone,
+HeartFilled,
+IdcardOutlined,
+} from "@ant-design/icons";
+
+import classes from "./mainContent.module.css";
+
 const { Content: AntContent } = Layout;
 const { Paragraph, Text, Link } = Typography;
+
 
 const ActionsList: React.FC = () => {
     const data: string[] = [

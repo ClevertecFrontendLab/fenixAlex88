@@ -1,10 +1,10 @@
 import { Layout } from 'antd';
 
-import './main-page.css';
-
 import { Sidebar } from '@components/sidebar';
 import { Header } from '@components/header';
 import { MainContent } from '@components/mainContent';
+
+import './main-page.css';
 
 export const MainPage: React.FC = () => {
     return (
@@ -15,7 +15,7 @@ export const MainPage: React.FC = () => {
         >
             <Sidebar />
             <Layout style={{ background: 'transparent' }}>
-                    <Header />
+                <Header />
                 <MainContent />
             </Layout>
         </Layout>

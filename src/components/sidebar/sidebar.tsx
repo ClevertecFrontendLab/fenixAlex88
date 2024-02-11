@@ -1,5 +1,5 @@
-import { Button, Divider, Menu } from 'antd';
-import { Layout } from 'antd';
+import { useState } from 'react';
+import { Layout, Button, Divider, Menu } from 'antd';
 import {
     CalendarTwoTone,
     HeartFilled,
@@ -9,10 +9,11 @@ import {
     TrophyFilled,
 } from '@ant-design/icons';
 import { ExitIcon } from '../Icons/exitIcon';
-import classes from './sidebar.module.css';
 import classNames from 'classnames';
-import { useState } from 'react';
 import { useWindowDimensions } from '@hooks/useWindowDimensions';
+
+import classes from './sidebar.module.css';
+
 const { Sider: AntSider } = Layout;
 
 export const Sidebar: React.FC = () => {
