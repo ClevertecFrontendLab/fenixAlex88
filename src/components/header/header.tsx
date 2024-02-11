@@ -1,12 +1,14 @@
 import { SettingOutlined } from '@ant-design/icons';
+import { Layout } from 'antd';
 import classes from './header.module.css';
 import { Button } from 'antd';
 import { Typography } from 'antd';
 const { Title, Text } = Typography;
+const { Header: AntHeader } = Layout;
 
 export const Header: React.FC = () => {
     return (
-        <div className={classes.header}>
+        <AntHeader className={classes.header}>
             <Text className={classes.breadcramp}>Главная</Text>
             <div className={classes.contentBlock}>
                 <Title className={classes.title}>
@@ -23,6 +25,6 @@ export const Header: React.FC = () => {
                     </Button>
                 </div>
             </div>
-        </div>
+        </AntHeader>
     );
 };

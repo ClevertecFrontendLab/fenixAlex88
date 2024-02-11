@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar>div {
 	height: 100vh;
 	max-height: 1024px;
 	position: relative;
@@ -10,14 +10,26 @@
 }
 
 .logo {
+	margin: 45px 0 56px;
 	background: center no-repeat url('@assets/icons/Logo.svg');
-	height: 34px;
+	height: 35px;
 	transition: all .2s;
 }
 
 .logoCollapsed {
 	background: center no-repeat url('@assets/icons/Logo_min.svg');
 	
+}
+
+ul.sidebarMenu {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	color: var(--character-light-title-85);
 }
 
 .collapsBtnWrapper {

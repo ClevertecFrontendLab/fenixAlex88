@@ -1,6 +1,7 @@
-.header {
+header.header {
 	background: #F0F5FF;
 	padding: 8px 24px;
+	height: auto;
 }
 
 .breadcramp {
