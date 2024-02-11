@@ -10,7 +10,7 @@ export const MainPage: React.FC = () => {
     return (
         <Layout
             style={{
-                background: "url('/images/Main_page_light.jpg') no-repeat",
+                background: "top / cover url('/images/Main_page_light.jpg') no-repeat",
             }}
         >
             <Sidebar />

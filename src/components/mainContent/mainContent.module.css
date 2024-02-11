@@ -5,16 +5,23 @@
 	padding: 24px;
 }
 
-.actionsList {
+.wrapper .actionsList {
 	max-width: 752px;
 	padding: 24px;
-	margin-bottom: 24px;
-	background: #fff;
+	border-radius: 2px;
+	background: var(--character-light-primary-inverse);
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: var(--primary-light-9);
 }
-
-.listHeader, ul>li.listItem {
+.wrapper .actionsList div, .wrapper .actionsList li {
 	border: none;
 	padding: 0;
+}
+.actionsList .listHeader, .actionsList ul>li.listItem {
 	font-size: 16px;
 	line-height: 130%;
 	font-weight: 400;
@@ -23,13 +30,54 @@
 
 .actionsBody {
 	max-width: 752px;
-	margin-top: 19px;
+	margin-top: 24px;
 	padding: 24px;
-	background: #fff;
+	border-radius: 2px;
+	background: var(--character-light-primary-inverse);
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+	font-family: var(--font-family);
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 130%;
-	color: #262626;
+	color: var(--character-light-title-85);
+}
+
+.actionCards {
+	max-width: 752px;
+	width: 100%;
+	justify-content: space-between;
+}
+.actionCards > div {
+	max-width: 240px;
+	width: 100%;
+	height: 100%;
+}
+
+.actionCards .actionCard {
+	border-radius: 2px;
+	background: var(--character-light-primary-inverse);
+	height: 100%;
+	text-align: center;
+}
+
+.actionCardTitle {
+	padding: 4px 8px;
+	font-family: var(--font-family);
+	text-wrap: wrap;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: var(--character-light-title-85);
+}
+
+button.actionCardBtn {
+	padding: 0 0 0 7px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	text-align: center;
+	color: var(--primary-light-6);
 }
 
 .footer {
@@ -40,4 +88,72 @@
 .downloadCardTitle {
 	display: flex;
 	flex-direction: column;
+}
+
+.footer {
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 18px;
+}
+
+.reviewsLink {
+	padding: 6px 15px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	text-align: center;
+	color: var(--primary-light-6);
+}
+
+.footer .downloadCard {
+	width: 240px;
+	height: 127px;
+	margin-top: 24px;
+	border-radius: 2px;
+}
+
+.downloadCard .downloadCardTitleLink {
+	margin-left: 12px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 160%;
+	color: var(--primary-light-6);
+}
+
+.downloadCard .downloadCardSubtitle {
+	margin-left: 12px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 200%;
+	color: var(--character-light-secondary-45);
+}
+
+.downloadCard .downloadCardBtn {
+	padding: 0;
+	width: 50%;
+}
+
+.downloadCardBtn span {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	text-align: center;
+	color: var(--character-light-title-85);
+}
+
+@media(max-width: 768px) {
+	.actionCards {
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
 }

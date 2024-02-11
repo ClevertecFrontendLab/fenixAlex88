@@ -8,15 +8,16 @@ import {
     MenuUnfoldOutlined,
     TrophyFilled,
 } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
 import { ExitIcon } from '../Icons/exitIcon';
 import classes from './sidebar.module.css';
 import classNames from 'classnames';
 import { useState } from 'react';
+import { useWindowDimensions } from '@hooks/useWindowDimensions';
 const { Sider: AntSider } = Layout;
 
 export const Sidebar: React.FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
+    const { width } = useWindowDimensions();
     return (
         <AntSider
             theme='light'
@@ -24,14 +25,14 @@ export const Sidebar: React.FC = () => {
             collapsible
             collapsed={collapsed}
             className={classes.sidebar}
-            width={'208px'}
+            width={width > 768 ? '208px' : '106px'}
             collapsedWidth={'64px'}
         >
             <div>
                 <div className={classNames(classes.logo, { [classes.logoCollapsed]: collapsed })} />
                 <Menu
                     mode='inline'
-                    inlineIndent={15}
+                    inlineIndent={width > 768 ? 15 : 0}
                     className={classes.sidebarMenu}
                     items={[
                         {
@@ -57,7 +58,24 @@ export const Sidebar: React.FC = () => {
                     ]}
                 />
             </div>
-            <div className={classes.collapsBtnWrapper}>
+            <div className={classes.collapsMobileBtnWrapper} data-test-id='sider-switch-mobile'>
+                <Button
+                    type='link'
+                    icon={
+                        collapsed ? (
+                            <MenuUnfoldOutlined
+                                style={{ color: 'var(--character-light-secondary-45)' }}
+                            />
+                        ) : (
+                            <MenuFoldOutlined
+                                style={{ color: 'var(--character-light-secondary-45)' }}
+                            />
+                        )
+                    }
+                    onClick={() => setCollapsed(!collapsed)}
+                />
+            </div>
+            <div className={classes.collapsBtnWrapper} data-test-id='sider-switch'>
                 <Button
                     type='link'
                     icon={
@@ -79,9 +97,15 @@ export const Sidebar: React.FC = () => {
                 <Menu
                     mode='inline'
                     selectable={false}
-                    className={classes.sidebarMenu}
+                    className={classNames(classes.sidebarMenu, classes.sidebarMenuExit)}
                     inlineIndent={15}
-                    items={[{ key: 'Exit', icon: <ExitIcon />, label: 'Выход' }]}
+                    items={[
+                        {
+                            key: 'Exit',
+                            icon: <ExitIcon />,
+                            label: <span className={classes.sidebarMenuExitLabel}>Выход</span>,
+                        },
+                    ]}
                 />
             </div>
         </AntSider>

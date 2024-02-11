@@ -104,4 +104,5 @@
     max-width: 1440px;
     max-height: 1024px;
     margin: 0 auto;
+    position: relative;
 }
