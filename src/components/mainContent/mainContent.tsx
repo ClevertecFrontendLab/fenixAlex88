@@ -33,19 +33,16 @@ const ActionsList: React.FC = () => {
     );
 };
 
-const ActionsBody: React.FC = () => {
-    return (
-        <Paragraph className={classes.actionsBody}>
+const ActionsBody: React.FC = () => (
+        <Paragraph className={classes.actionsBody} style={{marginBottom: 0}}>
             <Text>
                 CleverFit — это не просто приложение а твой личный помощник в мире фитнеса. Не
                 откладывай на завтра — начни тренироваться уже сегодня!
             </Text>
         </Paragraph>
     );
-};
 
-const ActionCards: React.FC = () => {
-    return (
+const ActionCards: React.FC = () => (
         <Space direction='horizontal' size={16} className={classes.actionCards}>
             <Card
                 size='small'
@@ -79,19 +76,15 @@ const ActionCards: React.FC = () => {
             </Card>
         </Space>
     );
-};
 
-const Footer: React.FC = () => {
-    return (
+const Footer: React.FC = () => (
         <div className={classes.footer}>
             <Link className={classes.reviewsLink}>Смотреть отзывы</Link>
             <DownloadCard />
         </div>
     );
-};
 
-const DownloadCard: React.FC = () => {
-    return (
+const DownloadCard: React.FC = () => (
         <Card
             size='small'
             className={classes.downloadCard}
@@ -105,23 +98,21 @@ const DownloadCard: React.FC = () => {
             <Button
                 type='link'
                 className={classes.downloadCardBtn}
-                icon={<AndroidFilled style={{ color: 'var(--character-light-title-85)' }} />}
+                icon={<AndroidFilled style={{ color: 'var(--character-light-title-85)'}} />}
             >
                 Android OS
             </Button>
             <Button
                 type='link'
                 className={classes.downloadCardBtn}
-                icon={<AppleFilled style={{ color: 'var(--character-light-title-85)' }} />}
+                icon={<AppleFilled style={{ color: 'var(--character-light-title-85)'}} />}
             >
                 Apple iOS
             </Button>
         </Card>
     );
-};
 
-export const MainContent: React.FC = () => {
-    return (
+export const MainContent: React.FC = () => (
         <AntContent className={classes.wrapper}>
             <Space direction='vertical' size={0} className={classes.content}>
                 <ActionsList />
@@ -131,4 +122,3 @@ export const MainContent: React.FC = () => {
             <Footer />
         </AntContent>
     );
-};

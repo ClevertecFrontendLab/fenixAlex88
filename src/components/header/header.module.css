@@ -1,7 +1,8 @@
 header.header {
 	background: var(--primary-light-1);
-	padding: 16px 24px;
+	padding: 16px 26px 15px;
 	height: auto;
+	line-height: 1.3;
 }
 
 .breadcramp {
@@ -12,10 +13,12 @@ header.header {
 .contentBlock {
 	display: flex;
 	justify-content: space-between;
+	line-height: 1.3;
 }
 
-.contentBlock .title {
+.contentBlock .title  {
 	margin: 15px 0 10px;
+	white-space: pre-line;
 	max-width: 900px;
 	font-weight: 700;
 	font-size: 38px;
@@ -23,18 +26,23 @@ header.header {
 }
 
 .settingBtn {
-	margin-top: 7px;
+	margin: 7px -4px 0 0;
 }
 
-@media(max-width: 1024px){
+@media (max-width: 1024px) {
 	.contentBlock .title {
 		font-size: 28px;
 	}
 }
 
-@media(max-width: 992px){
+@media (max-width: 992px) {
 	.contentBlock .title {
 		font-size: 24px;
+		font-weight: 500;
+	}
+
+	.settingBtn {
+		margin: 7px -5px 0 0;
 	}
 
 	.contentBlock .settingsImg {
@@ -42,7 +50,7 @@ header.header {
 	}
 }
 
-@media(max-width: 768px){
+@media (max-width: 768px) {
 	.contentBlock .title {
 		font-size: 20px;
 		font-weight: 500;
@@ -50,21 +58,23 @@ header.header {
 
 	.contentBlock .settingsImg {
 		display: block;
+
 		padding: 7px;
 		box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
 		background: var(--character-light-primary-inverse);
 		border: 1px solid var(--character-light-border);
 		border-radius: 50%;
-
 	}
-	.contentBlock .settingsImg+span{
+
+	.contentBlock .settingsImg + span {
 		display: none;
 	}
+
 	.contentBlock .title {
-		margin: 0;
+		margin-top: 10px;
 	}
+
 	.settingBtn {
-		margin-top: 0;
+		margin: -3px -19px 0 0;
 	}
-	
 }
