@@ -10,14 +10,14 @@
 
 .logo {
 	margin: 42px 14px 56px 0;
-	background: center no-repeat url('@assets/icons/Logo.svg');
+	background: center no-repeat url('./images/icons/Logo.svg');
 	height: 35px;
 	transition: all .2s;
 }
 
 .logoCollapsed {
 	margin-right: -5px;
-	background: center no-repeat url('@assets/icons/Logo_min.svg');
+	background: center no-repeat url('./images/icons/Logo_min.svg');
 	
 }
 
@@ -78,7 +78,7 @@ ul.sidebarMenu.sidebarMenuExit {
 	}
 
 	.logo {
-		background: center no-repeat url('@assets/icons/Logo_mobile.svg');
+		background: center no-repeat url('./images/icons/Logo_mobile.svg');
 		margin: 7px 0 21px;
 	}
 	ul.sidebarMenu{
