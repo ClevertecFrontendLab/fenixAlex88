@@ -58,6 +58,7 @@
 .actionCardTitle {
 	padding: 3px 8px;
 	text-wrap: wrap;
+	white-space: normal;
 	font-size: 16px;
 	color: var(--character-light-title-85);
 }
@@ -128,17 +129,20 @@ button.actionCardBtn {
 }
 @media(max-width: 992px){
 	.actionCardTitle {
-		text-align: start;
 		padding: 1px 0 0 12px;
+		text-align: start;
+	}
+		.actionCards > div {
+		max-width: none;
 	}
 }
 @media(max-width: 768px) {
-.wrapper {
-	padding: 24px 16px;
-}
-.wrapper .actionsList {
-	padding: 17px 38px 20px 17px;
-}
+	.wrapper {
+		padding: 24px 16px;
+	}
+	.wrapper .actionsList {
+		padding: 17px 38px 20px 17px;
+	}
 	.actionCards {
 		flex-wrap: wrap;
 		align-items: center;
@@ -154,11 +158,8 @@ button.actionCardBtn {
 }
 
 @media(max-width: 768px) {
-	.actionCards {
-		gap: 10px;
-	}
-	.actionCards > div {
-		max-width: none;
+	div.actionCard {
+		margin-bottom: -7px;
 	}
 	.actionCardTitle {
 		text-align: center;
@@ -166,9 +167,10 @@ button.actionCardBtn {
 	.footer .downloadCard {
 		width: 100%;
 		text-align: center;
+		margin-top: 32px;
 		margin-bottom: 26px;
 	}
 	.downloadCard .downloadCardBtn {
-	padding: 0 29px;
-}
+		padding: 0 29px;
+	}
 }
