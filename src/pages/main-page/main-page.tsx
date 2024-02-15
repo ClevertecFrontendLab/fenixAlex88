@@ -6,18 +6,16 @@ import { MainContent } from '@components/mainContent';
 
 import './main-page.css';
 
-export const MainPage: React.FC = () => {
-    return (
-        <Layout
-            style={{
-                background: "top / cover url('/images/Main_page_light.jpg') no-repeat",
-            }}
-        >
-            <Sidebar />
-            <Layout style={{ background: 'transparent' }}>
-                <Header />
-                <MainContent />
-            </Layout>
+export const MainPage: React.FC = () => (
+    <Layout
+        style={{
+            background: "top / cover url('/images/Main_page_light.jpg') no-repeat",
+        }}
+    >
+        <Sidebar />
+        <Layout style={{ background: 'transparent' }}>
+            <Header />
+            <MainContent />
         </Layout>
-    );
-};
+    </Layout>
+);

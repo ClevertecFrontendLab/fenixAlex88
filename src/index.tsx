@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { store } from '@redux/configure-store';
-import { MainPage } from './pages';
+import { AuthPage, MainPage } from './pages';
 
 import 'antd/dist/antd.css';
 import 'normalize.css';
@@ -19,6 +19,7 @@ root.render(
             <HashRouter>
                 <Routes>
                     <Route path='/' element={<MainPage />} />
+                    <Route path='auth' element={<AuthPage />} />
                 </Routes>
             </HashRouter>
         </Provider>
